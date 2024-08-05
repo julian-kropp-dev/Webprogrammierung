@@ -1,0 +1,1 @@
+Bitte ignoriere die E-Mail, wenn du es nicht warst, der sich versucht hat zu registrieren. Ansonsten kopiere folgenden Link in deinen Browser, um die Registrierung abzuschliessen: http://localhost:63342/PlaneSpottingSite/side/php/controller/finalize_registration.php?token=71d43f8e740d09e4478f257b90ef3915

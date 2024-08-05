@@ -1,0 +1,94 @@
+.navbar {
+    background-color: #204f6d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: larger;
+    z-index: 1000;
+}
+
+.menu-items, .menu-items-left, .menu-items-right  {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .last_element {
+    color: white;
+    margin-right: 15px;
+    padding: 30px;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    min-height: 20px;
+    max-height: 80px;
+    width: auto;
+    margin-left: 15px;
+}
+
+.navbar .menu-items a {
+    color: white;
+    padding: 30px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #29709B;
+}
+
+.menu-btn {
+    background: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    display: none;
+}
+
+#menu-toggle {
+    display: none; /* Checkbox unsichtbar machen */
+}
+
+#menu-toggle:checked + .menu-items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #204f6d;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+#menu-toggle:checked + .menu-items a {
+    padding: 10px 20px;
+}
+
+#menu-toggle:checked + .menu-items a:hover {
+    background-color: #29709B;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu-btn {
+        display: flex;
+        margin-right: 10px;
+    }
+
+    .menu-items {
+        display: none;
+    }
+    .navbar .logo {
+        width: 250px;
+        border: none;
+    }
+}
+
+

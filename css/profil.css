@@ -1,0 +1,257 @@
+body {
+    margin-top: 100px;
+    background-color: #d8d8d8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+}
+
+.profile {
+    grid-column: 1 / 2;
+}
+
+.user_list {
+    grid-column: 2 / 3;
+}
+
+.profile_container {
+    display: flex;
+    align-items: center;
+}
+
+.profile_img {
+    border-radius: 50%;
+}
+
+.upload_button {
+    display: none;
+    position: absolute;
+    margin-top: -33px;
+    margin-left: 12px;
+    padding: 8px 16px;
+    background-color: #29709b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.profile_img_container:hover .upload_button {
+    display: block;
+}
+
+.text_button_container {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.text_button_container #welcome_text {
+    margin-top: 30px;
+}
+
+#edit_profile_button {
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+#edit_profile_button:hover {
+    background-color: black;
+    color: white;
+}
+
+#welcome_text {
+    margin-left: 10px;
+}
+
+#mail {
+    color: black;
+}
+
+.public_about_me_section p {
+    line-height: 1.5;
+}
+
+.container .profile .change_profil_settings {
+    display: contents;
+}
+
+#save_changes_button:enabled {
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    width: 180px;
+    height: 50px;
+}
+
+#save_changes_button:disabled {
+    margin-top: 15px;
+    border-radius: 30px;
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+    font-size: 14px;
+    border: none;
+    width: 250px;
+    height: 50px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 250px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.container .profile .delete_account #delete_account_button {
+    border-radius: 30px;
+    background-color: rgb(184, 17, 17);
+    color: white;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+}
+
+.user_list_users {
+    background-color: white;
+    width: 350px;
+    padding: 0;
+}
+
+.user_list_users li {
+    list-style-type: none;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+
+.user_list_users li:last-child {
+    border-bottom: none;
+}
+
+.user_list_users li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+}
+
+.user_list_users li a:hover {
+    color: #29709B;
+}
+
+/* Modal für das vergrößerte Bild */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .profile, .user_list {
+        grid-column: 1 / -1;
+    }
+
+    .profile_container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile_img {
+        margin-bottom: 20px;
+    }
+
+    .text_button_container {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text_button_container #welcome_text,
+    #edit_profile_button {
+        margin-left: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    #edit_profile_button {
+        width: 100%;
+    }
+
+    .user_list_users {
+        width: 100%;
+    }
+}

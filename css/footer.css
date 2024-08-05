@@ -1,0 +1,33 @@
+footer {
+    background-color: #204f6d;
+    color: white;
+    margin-top: 20px;
+    padding: 12px 0 12px 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.footer-link {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 400px) {
+    .footer_content {
+        flex-wrap: wrap;
+    }
+
+}
